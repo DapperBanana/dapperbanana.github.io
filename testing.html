@@ -3,17 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Test Title</title>
+  <title>Your Webpage Title</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap">
   <style>
     body {
       font-family: 'Inconsolata', monospace;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 50px;
+    }
+
+    h2 {
+      font-weight: 300;
+      color: #666;
+    }
+
+    .buttons-container {
+      text-align: center;
+      line-height: 40px;
+      margin-top: 20px;
+    }
+
+    .button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      color: black;
+      display: inline-block;
+      vertical-align: middle;
+      text-decoration: none;
+    }
+
+    .github-button {
+      margin: 0 10px;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 50%;
+      overflow: hidden;
+      vertical-align: middle;
+    }
+
+    .github-button img {
+      width: 40px;
+      height: 40px;
+      vertical-align: middle;
     }
   </style>
 </head>
 <body>
-  <!-- Your HTML content goes here -->
-  <h1>Hello, World!</h1>
-  <p>This is a sample webpage using the Inconsolata font.</p>
+
+  <h1>Austin</h1>
+  <h2>above average</h2>
+
+  <div class="buttons-container">
+    <span class="button">HOME</span>
+    <span class="button">RESUME</span>
+    <span class="button">DOCS</span>
+    <a href="https://github.com/yourusername" class="github-button">
+      <img src="https://pngimg.com/uploads/github/github_PNG53.png" alt="GitHub">
+    </a>
+  </div>
+
 </body>
 </html>
