@@ -1,6 +1,8 @@
 # Austin L. Howard's Portfolio
 
-Welcome to my GitHub Pages repository! This repository hosts the HTML and CSS code for my personal portfolio website.
+![Profile Photo](profile-photo.png)
+
+Welcome to my GitHub Pages repository! This repository hosts the HTML code for my personal portfolio website.
 
 ## About Me
 
@@ -18,10 +20,7 @@ While I'm currently employed full-time and unable to take on contract work, I'm 
 
 - [LinkedIn](https://www.linkedin.com/in/austin-l-howard/)
 - [GitHub](https://github.com/DapperBanana)
-
-## Contact
-
-Feel free to reach out to me via email: [contact@austinlhoward.com](mailto:contact@austinlhoward.com)
+- [E-mail](mailto:contact@austinlhoward.com)
 
 ## Resume
 
@@ -30,19 +29,3 @@ Check out my resume in different formats:
 - [Word](resume.docx)
 - [Text](resume.txt)
 
-## Projects and Hobbies
-
-When I'm not working, you'll find me:
-
-- Making mediocre game demos that never win at game jams.
-- Attempting to be active by mountain biking or skateboarding.
-- Nerding out over radio astronomy and other SDR-related things.
-- Making jokes that only I laugh at while writing prose in the third person.
-
-## Profile Photo
-
-![Profile Photo](profile-photo.png)
-
-## License
-
-© 2019-2024 Austin L. Howard
