@@ -38,12 +38,17 @@
       display: inline-block;
       vertical-align: middle;
       text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background-color 0.1s ease, color 0.1s ease;
     }
-
+    .button:hover {
+      background-color: #ddd; /* Change the background color on hover */
+    }
     .github-button {
       margin: 0 10px;
       padding: 10px;
-      background-color: #333;
+      background-color: white;
       color: white;
       text-decoration: none;
       display: inline-block;
@@ -56,22 +61,91 @@
       width: 40px;
       height: 40px;
       vertical-align: middle;
+      transition: filter 0.3s ease;
+    }
+
+    .github-button:hover img {
+      filter: invert(50%); /* Invert colors on hover */
+    }
+
+    .container {
+      width: 80%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .column {
+      width: 45%;
+      margin: 10px;
+      padding: 20px;
+      
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center items horizontally */
+      justify-content: center; /* Center items vertically */
+    }
+
+    .column img {
+      max-width: 100%; /* Make sure the image does not exceed its container */
+      max-height: 100%; /* Make sure the image does not exceed its container */
+    }
+
+    .left-justify {
+      text-align: left;
+    }
+
+    .small-text {
+      font-size: 16px;
+    }
+
+    @media (max-width: 800px) {
+      .column {
+        width: 90%;
+      }
     }
   </style>
 </head>
 <body>
 
   <h1>Austin L. Howard</h1>
-  <h2>above average code monkey, below average potassium levels</h2>
+  <h2 style="font-size: 13px;">above average code monkey, below average potassium levels</h2>
 
   <div class="buttons-container">
     <span class="button">HOME</span>
     <span class="button">RESUME</span>
     <span class="button">DOCS</span>
-    <a href="https://github.com/yourusername" class="github-button">
-      <img src="https://pngimg.com/uploads/github/github_PNG53.png" alt="GitHub">
+    <a href="https://github.com/DapperBanana" class="github-button">
+      <img src="https://logodix.com/logo/1205168.png" alt="GitHub">
     </a>
   </div>
-
+  <div class="container">
+    <div class="column left-justify small-text">
+      <p>
+        Austin currently works for Heartland Generation as a Business Analyst, though he insists that that title doesn’t fully cover what he does in a day. From what I’ve heard his daily routine usually covers anything from:
+      </p>
+      <ul>
+        <li> Sipping on his 8th coffee of the day while building out .NET 6 Azure Function Apps </li>
+        <li> Pulling out hair while setting up Blazor web apps (or any web apps really) </li>
+        <li> Counting ceiling tiles while managing company projects and IS initiatives </li>
+        <li> Spending evenings falling asleep to the gentle (and totally not deafening) hum of server fans when something inevitably breaks </li>
+        <li> Drinking bottles of whiskey after work to calm the nerves after a Friday production deployment </li>
+      </ul>
+      <p> 
+        While you may have read that and thought to yourself “This is the one! This is the mythical ‘best worker possible’ that we heard about during our HR conferences!” Unfortunately, Austin is employed full-time at the moment and unable to take on any contract work. That being said he is always open to building new relationships with other people in the industry; Austin has a soft spot for helping people out
+        (though he’11 probably never admit that in public) and loves making new friends.
+      </p>
+      <p> 
+        When he isn’t working, Austin comes home to make mediocre game demos that never win at game jams, sometimes he attempts to be active by mountain biking or skateboarding, occasionally he nerds out over radio astronomy and other SDR related things, but mostly he’s known for making jokes that only he laughs to while writing prose in the third person.
+      </p>
+    </div>
+    <div class="column">
+      <img src="https://avatars.githubusercontent.com/u/27406716?v=4" alt="GitHub">
+    </div>
+  </div>
+  <p style="font-weight: bold;font-style: italic;font-size: 12px;">© 2019-2024 Austin L. Howard</p>
 </body>
 </html>
