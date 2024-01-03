@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Austin L. Howard</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;700&display=swap">
+  <style>
+    body {
+      font-family: 'Inconsolata', monospace;
+      text-align: center;
+    }
+
+    h1, h2 {
+      font-family: 'Inconsolata', monospace;
+    }
+
+    h1 {
+      margin-top: 50px;
+      font-weight: 500;
+      font-size: 35px;
+      margin: 5px;
+    }
+
+    h2 {
+      font-weight: 300;
+      color: #666;
+      font-size: 11px;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .hero-header{
+      font-size: 40px; 
+      font-style: italic; 
+      margin-top: 50px; 
+      margin-bottom: 40px; 
+      font-weight: bolder;
+    }
+
+    .copyright{
+      font-weight: bold;
+      font-style: italic;
+      font-size: 12px;
+    }
+
+    .buttons-container {
+      text-align: center;
+      line-height: 40px;
+      margin-top: 20px;
+    }
+
+    .button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      color: black;
+      display: inline-block;
+      vertical-align: middle;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 500;
+      font-size: 15px;
+      transition: background-color 0.1s ease, color 0.1s ease;
+    }
+
+    .button:hover {
+      background-color: #ddd;
+    }
+
+    .github-button {
+      margin: 0 10px;
+      padding: 10px;
+      background-color: white;
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 50%;
+      overflow: hidden;
+      vertical-align: middle;
+    }
+
+    .github-button img {
+      width: 40px;
+      height: 40px;
+      vertical-align: middle;
+      transition: filter 0.3s ease;
+    }
+
+    .github-button:hover img {
+      filter: invert(50%);
+    }
+
+    .container {
+      width: 80%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .column {
+      width: 45%;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .column img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .left-justify {
+      text-align: left;
+    }
+
+    .small-text {
+      font-size: 15px;
+    }
+
+    .second-column {
+      width: 25%;
+      margin-left: 0%;
+    }
+
+    .resume-options {
+      position: relative;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .resume-options .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 150px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      text-align: center;
+      left: 50%; /* Center the dropdown relative to the parent */
+      transform: translateX(-50%);
+    }
+
+    .resume-options .dropdown-content a {
+      display: block;
+      padding: 5px;
+      text-decoration: none;
+      color: black;
+      transition: background-color 0.1s ease, color 0.1s ease;
+      border-radius: 10px;
+      font-size: 12px;
+    }
+
+    .resume-options .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .resume-options:hover .dropdown-content {
+      display: block;
+    }
+
+    @media (max-width: 800px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .column {
+        width: 100%;
+        margin: 0;
+      }
+
+      .column img {
+        order: 0;
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="spacer" style="height: 20px;"></div>
+  <h1>Austin L. Howard</h1>
+  <h2>above average code monkey, below average potassium levels</h2>
+
+  <div class="buttons-container">
+    <div class="resume-options">
+      <span class="button">S O C I A L</span>
+      <div class="dropdown-content">
+        <a href="https://www.linkedin.com/in/austin-l-howard/" target="_blank">L I N K E D I N</a>
+        <a href="https://github.com/DapperBanana" target="_blank">G I T H U B</a>
+      </div>
+    </div>
+    <a href="mailto:contact@austinlhoward.com">
+      <span class="button">C O N T A C T</span>
+    </a>
+    <div class="resume-options">
+      <span class="button">R E S U M E</span>
+      <div class="dropdown-content">
+        <a href="resume.docx" download="austin-howard-2024-resume.docx">W O R D</a>
+        <a href="resume.txt" download="austin-howard-2024-resume.txt">T E X T</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="hero-header">
+    Hey there, I’m Austin!
+  </p>
+
+  <div class="container">
+    <div class="column left-justify small-text">
+      <p>
+        Austin currently works for Heartland Generation as a Business Analyst, though he insists that that title
+        doesn’t fully cover what he does in a day. From what I’ve heard his daily routine usually covers anything
+        from:
+      </p>
+      <ul>
+        <li>Sipping on his 8th coffee of the day while building out .NET 6 Azure Function Apps </li>
+        <li>Pulling out hair while setting up Blazor web apps (or any web apps really) </li>
+        <li>Counting ceiling tiles while managing company projects and IS initiatives </li>
+        <li>Spending evenings falling asleep to the gentle (and totally not deafening) hum of server fans when something inevitably breaks </li>
+        <li>Drinking bottles of whiskey after work to calm the nerves after a Friday production deployment </li>
+      </ul>
+      <p>
+        While you may have read that and thought to yourself “This is the one! This is the mythical ‘best worker
+        possible’ that we heard about during our HR conferences!” Unfortunately, Austin is employed full-time at
+        the moment and unable to take on any contract work. That being said he is always open to building new
+        relationships with other people in the industry; Austin has a soft spot for helping people out (though
+        he’11 probably never admit that in public) and loves making new friends.
+      </p>
+      <p>
+        When he isn’t working, Austin comes home to make mediocre game demos that never win at game jams,
+        sometimes he attempts to be active by mountain biking or skateboarding, occasionally he nerds out over
+        radio astronomy and other SDR related things, but mostly he’s known for making jokes that only he
+        laughs to while writing prose in the third person.
+      </p>
+    </div>
+    <div class="column second-column">
+      <img src="WebsitePhoto-1024x884.png" alt="Profile Photo">
+    </div>
+  </div>
+  <div class="spacer" style="height: 20px;"></div>
+  <p class="copyright">
+    © 2019-2024 Austin L. Howard
+  </p>
+</body>
+  
