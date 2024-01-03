@@ -1,6 +1,7 @@
 # Austin L. Howard's Portfolio
 
-![Profile Photo](profile-photo.png =250x)
+
+<img src="profile-photo.png" width="300" />
 
 Welcome to my GitHub Pages repository! This repository hosts the HTML code for my personal portfolio website.
 
