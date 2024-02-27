@@ -1,16 +1,603 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Projects</title>
-</head>
-<body>
-    <h1>Projects</h1>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;700&display=swap">
+    <style>
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            background-color: white; /* Add your preferred background color */
+            padding: 10px;
+            text-align: center;
+            z-index: 100;
+        }
+        body {
+        font-family: 'Inconsolata', monospace;
+        text-align: center;
+        }
 
-    <!-- Button linking to index.html -->
-    <a href="index.html">
-        <button>Home</button>
-    </a>
-</body>
+        h1, h2 {
+        font-family: 'Inconsolata', monospace;
+        }
+
+        h1 {
+        margin-top: 50px;
+        font-weight: 500;
+        font-size: 35px;
+        margin: 5px;
+        }
+
+        h2 {
+        font-weight: 300;
+        color: #666;
+        font-size: 11px;
+        margin: 0;
+        font-weight: 500;
+        }
+
+        a {
+        text-decoration: none;
+        }
+
+        .hero-header{
+        font-size: 40px; 
+        font-style: italic; 
+        margin-top: 50px; 
+        margin-bottom: 40px; 
+        font-weight: bolder;
+        }
+
+        .copyright{
+        font-weight: bold;
+        font-style: italic;
+        font-size: 12px;
+        }
+
+        .buttons-container {
+        text-align: center;
+        line-height: 40px;
+        margin-top: 20px;
+        }
+
+        .button {
+        margin: 0 10px;
+        padding: 10px 20px;
+        color: black;
+        display: inline-block;
+        vertical-align: middle;
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: 500;
+        font-size: 15px;
+        transition: background-color 0.1s ease, color 0.1s ease;
+        }
+
+        .button:hover {
+        background-color: #ddd;
+        }
+
+        .github-button {
+        margin: 0 10px;
+        padding: 10px;
+        background-color: white;
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 50%;
+        overflow: hidden;
+        vertical-align: middle;
+        }
+
+        .github-button img {
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+        transition: filter 0.3s ease;
+        }
+
+        .github-button:hover img {
+        filter: invert(50%);
+        }
+
+        .container {
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        }
+
+        .column {
+        width: 45%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        }
+
+        .column img {
+        max-width: 100%;
+        height: auto;
+        }
+
+        .left-justify {
+        text-align: left;
+        }
+
+        .small-text {
+        font-size: 15px;
+        }
+
+        .second-column {
+        width: 25%;
+        margin-left: 0%;
+        }
+
+        .resume-options {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        }
+
+        .resume-options .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 150px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        text-align: center;
+        left: 50%; /* Center the dropdown relative to the parent */
+        transform: translateX(-50%);
+        }
+
+        .resume-options .dropdown-content a {
+        display: block;
+        padding: 5px;
+        text-decoration: none;
+        color: black;
+        transition: background-color 0.1s ease, color 0.1s ease;
+        border-radius: 10px;
+        font-size: 12px;
+        }
+
+        .resume-options .dropdown-content a:hover {
+        background-color: #ddd;
+        }
+
+        .resume-options:hover .dropdown-content {
+        display: block;
+        }
+
+        @media (max-width: 800px) {
+        .container {
+            flex-direction: column;
+        }
+
+        .column {
+            width: 100%;
+            margin: 0;
+        }
+
+        .column img {
+            order: 0;
+            margin-top: 20px;
+        }
+        }
+    </style>
+    </head>
+    <body>
+        <div class="sticky-header">
+            <div class="spacer" style="height: 20px;"></div>
+            <a class="button" onclick="window.location.href='index.html'">
+                <h1>Austin L. Howard</h1>
+            </a>
+            <h2>above average code monkey, below average potassium levels</h2>
+
+            <div class="buttons-container">
+                <div class="resume-options">
+                <span class="button">S O C I A L</span>
+                <div class="dropdown-content">
+                    <a href="https://www.linkedin.com/in/austin-l-howard/" target="_blank">L I N K E D I N</a>
+                    <a href="https://github.com/DapperBanana" target="_blank">G I T H U B</a>
+                </div>
+                </div>
+                <a href="mailto:contact@austinlhoward.com">
+                <span class="button">C O N T A C T</span>
+                </a>
+                <div class="resume-options">
+                    <span class="button">R E S U M E</span>
+                    <div class="dropdown-content">
+                        <a href="resume.docx" download="austin-howard-2024-resume.docx">W O R D</a>
+                        <a href="resume.txt" download="austin-howard-2024-resume.txt">T E X T</a>
+                    </div>
+                </div>
+            </div>
+            <div class="resume-options">
+                <span class="button">P R O J E C T S</span>
+                <div class="dropdown-content">
+                    <p>Professional Projects</p>
+                    <a href="#operations-metrics-portal"">Operations Site Metrics Portal</a>
+                    <a href="#operations-data-extract-pipeline"">Operations Data Extract Pipeline</a>
+                    <a href="#front-office-finance-web-app"">Front Office Finance Web App</a>
+                    <a href="#P25-Interoperability"">Cross-Border P25 Interoperability</a>
+                    
+                    <p>Personal Projects</p>
+                    <a href="#aside-about-me">Aside about me...</a>
+                    <a href="#sdr">SDR Projects</a>
+                    <a href="#discord-roguelike">Discord Roguelike</a>
+                    <a href="#nes-emulator">NES Emulator</a>
+                    <a href="#lox-implementation">Lox Implementation</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="spacer" style="height: 20px;"></div>
+        <h1 style="font-size: large;">Professional Projects</h1>
+
+        <div id="operations-metrics-portal" class="container">
+            <div class="column left-justify small-text">
+                <p style="font-style: italic;font-weight: bold;">
+                    Operations Site Metrics Portal
+                </p>
+                <p>
+                    Like most companies, Heartland had many different processes all running in different departments in tandem
+                    in order to create specific monthly/quarterly/yearly reports. Taking on a project this large is typically
+                    not something I've seen many development groups be willing to take on. Our department was small, though,
+                    comprising of a remote contractor, our senior data architect, and myself. While small, none of us back
+                    down from a challenge and our architect, Simon Wong, is well known for taking on large tasks so we happily 
+                    took on the challenge. Our main goal was to create an automated pipeline that would gather as much data as 
+                    possible and hopefully create all of the operations departments needed reports without all of the leg work 
+                    that was done every month. (It became so intense that they ended up hiring a specialist full time just to 
+                    create this monthly report)
+                </p>
+                <p>
+                    Of course there are always concessions to be made and we ended up making a few. While it would be a dream
+                    to be able to automate the entire report we did end up needing some manual intervention on some records. Due
+                    to that we had to then create an approval structure so that changes could be made and verified (along with
+                    the multiple intermediary tables and calculations for checks and balances along the way).
+                </p>
+                <p>
+                    With our rag tag team though we were able to create a reliable pipeline that extracted SCADA information from 
+                    the field sites, combined that with publicly available AESO data, and then allowed our field operators (within a 
+                    predefined approval structure) to go in and edit any outages or metrics that we may have automatically detected 
+                    in case explanation was needed that could not be provided through our raw data pull. From the field operators 
+                    perspective that meant that they no longer had to duplicate data from their hand written notes over to excel 
+                    spreadsheets and then over again into these excel monthly reports and on and on and on. No, thankfully they'd 
+                    only have to verify information before the monthly reports went out; Which, of course, automatic notifications
+                    were sent out to ensure the operators, shift supervisors, and foremen didn't forget to verify.
+                </p>
+                <p>
+                    While all of this is going on, we still need to talk about the lovely people back at HQ. These folks are also 
+                    needing to see data, and the sooner the better. Since this info was always locked behind spreadsheet after 
+                    spreadsheet (sometimes saved to Sharepoint, sometimes saved locally), there was never a reliable way to gather
+                    data as the month was progressing.
+                </p>
+                <p>
+                    (My personal goal is to rid the world of its dependance on Excel but I think the almighty Gates is winning that one)
+                </p>
+                <p>
+                    So once we had that data inside the warehouse, we were able to then go and create a dynamic report that built and
+                    forcasted as the month, quarter, and year progressed. While the report itself was created in PowerBI I embedded
+                    this into the site so it could become a one stop shop for all things related to this Operations report.
+                </p>
+                <p>
+                    As this was servicing such a wide range of employee types, we added in SAML SSO for security as well as dynamic menus
+                    so that while the portal stayed the same, each position within the company had a tailored experience.
+                </p>
+            </div>
+            <div class="column second-column">
+                <img src="AESO-Data.gif" alt="AESO Data GIF">
+                <div class="spacer" style="height: 60px;"></div>
+                <img src="OperationsSite.gif" alt="Operations Site GIF">
+                <div class="spacer" style="height: 60px;"></div>
+                <img src="FleetMetrics.gif" alt="Fleet Metrics GIF">
+                <div class="spacer" style="height: 60px;"></div>
+                <img src="SSMS-Execution-Plan.gif" alt="SSMS Graphic GIF">
+                <div class="spacer" style="height: 60px;"></div>
+                <img src="PowerBI-Dashboard.gif" alt="PowerBI Dashboard GIF">
+            </div>
+        </div>
+        <div class="spacer" style="height: 20px;"></div>
+
+        <div id="operations-data-extract-pipeline" class="container">
+            <div class="column left-justify small-text">
+                <p style="font-style: italic;font-weight: bold;">
+                    Operations Data Extract Pipeline
+                </p>
+                <p>
+                    It seems to be that most SaaS companies out there are able to build out a platform that both entices and traps.
+                    Not that that's a bad thing, but I find that often the case is that your company seems to do something that 
+                    allegedly no other company in the world does. Of course this means customization... Well... Customization and
+                    SaaS means $$$. They go together about as well as water and oil some times.
+                </p>
+                <p>
+                    The solution that I had at the time was that our MOC (management of change) and incident tracking system would
+                    have it's data extracted and tossed into our data warehouse. Once it's there I can gladly help people create 
+                    any sort of report their heart desires. Problem: Most of the data (that we own) is locked behind a paywall.
+                    We of course paid it and extracted what we could out of their ODATA connector (thank you Azure Logic Apps for
+                    timing and Azure Function Apps for the extract). That being said, not all of the data we had was included in 
+                    this daily extract. To remedy this our good old friend, web scraping, came into play in order to extract files,
+                    missing data, headers, essentially any information that we owned that our management system was unable to get 
+                    us easily.
+                </p>
+                <p>
+                    After the initial pull I could hash files, check for any changes, insert data where needed... It was glorious!
+                    It became handy enough that we saved about $5k/year on data requests and then about $10k/year on application 
+                    changes to their reporting module within the software.
+                </p>
+            </div>
+            <div class="column second-column">
+                <img src="Velocity-EHS.gif" alt="Velocity EHS GIF">
+                <div class="spacer" style="height: 20px;"></div>
+                <img src="SQL-View.gif" alt="SQL View GIF">
+            </div>
+        </div>
+        <div class="spacer" style="height: 20px;"></div>
+
+        <div id="front-office-finance-web-app" class="container">
+            <div class="column left-justify small-text">
+                <p style="font-style: italic;font-weight: bold;">
+                    Front Office Finance Web App
+                </p>
+                <p>
+                    When I first started at Heartland we were using Vue.JS for all of our web apps and... While there's nothing
+                    wrong with JavaScript (*looks around*... "Did the JS fanatics put their pitchforks down?") if your entire
+                    stack is written in C# it's a hell of a lot nicer to use something that doesn't require context switching
+                    (not that we're not capable of it). So we decided to experiment with a few different technologies and I ended
+                    up wanting to experiment with Blazor as my next project.
+                </p>
+                <p>
+                    I decided to largely attempt to create our existing web app style but just with a Blazor WebAssembly web app.
+                    During this period of time we had a summer student working for us as a Jr. Dev so I was able to architect a 
+                    game plan on implementing this, set up some tasks, and then work with our summer student to create our new
+                    Blazor WebAssembly template.
+                </p>
+                <p>
+                    We needed a couple things on this like SAML SSO integration with Azure, PowerBI integration for reporting,
+                    dynamic data entry forms, amongst other standard web app components that we used internally.
+                </p>
+                <p>
+                    After about 3-4 weeks we had a working demo and were able to start work on implementing the DevOps pipeline
+                    for automated testing and deployment. Working off of that we managed to get the web app to a state where 
+                    the former Excel-based 3-day-long task was now reduced to about a 30 min verification of data once a month.
+                </p>
+            </div>
+            <div class="column second-column">
+                <img src="Blazor-Demo.gif" alt="Blazor Demo GIF">
+                <div class="spacer" style="height: 60px;"></div>
+                <img src="PowerBI.gif" alt="PowerBI Basic GIF">
+                <div class="spacer" style="height: 60px;"></div>
+                <img src="Blazor Template.gif" alt="Blazor Website GIF">
+            </div>
+        </div>
+        <div class="spacer" style="height: 20px;"></div>
+
+        <div id="P25-Interoperability" class="container">
+            <div class="column left-justify small-text">
+                <p style="font-style: italic;font-weight: bold;">
+                    Cross-Border P25 Interoperability
+                </p>
+                <p>
+                    Do you like American border security? Yeah... Me neither. I do, however, have a love for radio and have been 
+                    lucky enough to work at the RCMP as a radio technologist. While I was at the RCMP I got to work with a lot of
+                    cool and fun tech, some of that being some Harris P25 systems (as the emergency service radio geeks will know);
+                    Though I suppose now they're known as "L3Harris". Regardless, when it comes to border security it's no surprise
+                    that governments work together to ensure safety. This typically means creating interoperability between disperate
+                    technologies. In our case it was interfacing our P25 systems with the US's legacy radio systems.
+                </p>
+                <p>
+                    Keep in mind I can only speak at a relatively high level for this project.
+                </p>
+                <p>
+                    In, possibly my favorite project to date, I was able to work with RCMP, American Border Security, Harris, and more
+                    to design my own PCB that allowed for interoperability between our systems and theirs. Not only this but I was able
+                    to design and project manage the creation of a new radio tower along the border to service both Canada and the US.
+                    Working within the bounds of both countries very rigid regulations was not an easy task but it was possibly one of
+                    the most rewarding I've taken on. To be able to know that it was my work that keeps part of the border safe, that
+                    something that emergency services to this day use something that I designed... It was a pleasure to be able to 
+                    offer my services and I hope one day to be able to contribute something like this to society again.
+                </p>
+            </div>
+            <div class="column second-column">
+                <img src="RadioTower.gif" alt="Radio Tower Design GIF">
+                <div class="spacer" style="height: 60px;"></div>
+                <img src="SDR-P25.gif" alt="SDR P25 GIF">
+            </div>
+        </div>
+        <div class="spacer" style="height: 20px;"></div>
+
+        <h1 style="font-size: large;">Personal Projects</h1>
+
+        <div id="aside-about-me" class="container">
+            <div class="column left-justify small-text">
+                <p style="font-style: italic;font-weight: bold;">
+                    Aside about me...
+                </p>
+                <p>
+                    After disparaging myself for this entire website, let me blow some steam up my own ass for a second here. I 
+                    have a deep love of learning. Yes, a lot of people do. I do though to the extent where it's caused issues in 
+                    my personal life. 
+                </p>
+                <img src="Me Working.gif" alt="Me Working GIF">
+                <p>
+                    Over time I've learned to reign in my interests and focus on a couple things at a time. Life,
+                    like many things, is about balance. In today's world it seems that everyone has an intense desire to become the 
+                    absolute best at one very specific thing. (These days a lot of people seem to have an odd obsession with JS related 
+                    frameworks? Couldn't tell ya why) For myself, I just want to learn about as many things as I can. I'll
+                    be the first to admit that I'm not the best at anything I do, but my interests vary so much that I'd hazard a 
+                    guess that I'm a very good candidate for a polymath and can most likely out preform most people at most 
+                    computer-related tasks.
+                </p>
+                <p>
+                    I'm far from being the most intelligent person I know but in my opinion, I think the most interesting people I've
+                    met were those that had an incredibly wide skillset; One day I hope to be that for someone else. I think back to 
+                    some of the greats like the prop masters of yore as well as one of my favorite makers that I've had the pleasure 
+                    of meeting... Adam Savage.
+                </p>
+                <img src="Adam Savage.png" alt="Me and Adam Savage">
+                <p>
+                    Below you'll see a number of projects I'm either currently working on, are ongoing, or I've just wrapped.
+                    You'll notice that these projects vary quite a bit and may not have any rhyme or reason behind them. That's
+                    okay! That's my intent. I just love being able to learn and do things. This ranges from SDR, game development,
+                    3D design, FPGA, interpreter creation, woodworking, metalurgy, sewing, and much much more. I'd like to think that
+                    in a former life I was a prop designer based on my list of interests.
+                </p>
+                <p>
+                    Anyways, enjoy and hopefully you find something that peaks your interest!
+                </p>
+            </div>
+        </div>
+        <div class="spacer" style="height: 20px;"></div>
+
+        <div id="sdr" class="container">
+            <div class="column left-justify small-text">
+                <p style="font-style: italic;font-weight: bold;">
+                    SDR Projects
+                </p>
+                <p>
+                    So you have an interest in radio... You've come to the right place. The wild world of analog first caught my
+                    interest when I was but a wee lad. Ever since then I've hoped and dreamed for a job where I can use some of 
+                    the creativity and flexibility seen in analog tech. Alas, I had one job that dealt with radio communications
+                    and the rest have been slowly pushing me into software/data engineering so this has become a hobby for me.
+                </p>
+                <p>
+                    After finding out about SDR a number of years ago I've slowly been growing my antennas (both homemade and 
+                    pre-built). this has allowed me to work on a number of projects, whether it be the starters like finding 
+                    radio stations, intercepting air traffic controller communication, following active flights in my area, intercepting 
+                    local emergency service communications, and then even to more recent projects like trying to read unencrypted
+                    P25 communications, radio-photography through GOES satellites, and even trying my hand at creating a weather 
+                    database pipeline using NOAA satellites.
+                </p>
+                <p>
+                    There's always something to do with SDR and please reach out if you want to nerd out over frequencies, I truly
+                    do find this one of the most interesting subjects.
+                </p>
+            </div>
+            <div class="column second-column">
+                <img src="SDR-Hardware.gif" alt="SDR Hardware GIF">
+                <div class="spacer" style="height: 20px;"></div>
+                <img src="SDR-Basic.gif" alt="Basic SDR GIF">
+            </div>
+        </div>
+        <div class="spacer" style="height: 20px;"></div>
+
+        <div id="discord-roguelike" class="container">
+            <div class="column left-justify small-text">
+                <p style="font-style: italic;font-weight: bold;">
+                    Discord Roguelike
+                </p>
+                <p>
+                    While sitting at home during the pandemic I was struggling to find a good project to sit down and do. After a bit
+                    of hum and haw I finally landed on making a game... In Discord. This was also BEFORE they announced they were going 
+                    to make full fledged games inside of Discord so it seemed somewhat original since I couldn't find a single example 
+                    of what I was doing. After some deliberating I decided I wanted full audio support for a complete roguelike experience
+                    inside of a channel.
+                </p>
+                <p>
+                    The backend of this is largely the same as a normal project, you create your random dungeon, you spawn the creatures 
+                    and the treasure, you set your goal, and you're off to the races. I added a couple more things like a boss on level 10,
+                    attribute leveling, weapons, and a 5e based RNG combat system. It came together fairly nicely, the only tricky thing
+                    was dealing with Discord. I needed to have it so that other people couldn't screw you over in chat, if multiple people
+                    wanted to play I needed profiles with saves, and I also needed a timeout in case someone left discord for the day and 
+                    someone else decided they wanted to grind a bit.
+                </p>
+                <p>
+                    All in all I think it took me a couple months to get the first version done which worked pretty well. Ever since then I
+                    jump into the code base to clean it up, add some new features, fix some bugs, and try to make it run a bit better. It's 
+                    not perfect, and I definitely break it more than anything else, but it was a fun project and a good way to learn some 
+                    python that I otherwise wouldn't have known.
+                </p>
+            </div>
+            <div class="column second-column">
+                <img src="catacombs.png" alt="Catacombs Screenshot">
+            </div>
+        </div>
+        <div class="spacer" style="height: 20px;"></div>
+
+        <div id="nes-emulator" class="container">
+            <div class="column left-justify small-text">
+                <p style="font-style: italic;font-weight: bold;">
+                    NES Emulator
+                </p>
+                <p>
+                    This is a relatively recent one! 
+                </p>
+                <p>
+                    I don't have much to say about this one other than so far it's been awesome to go back to my roots and deal with some 
+                    low level learning. Dealing with 6502 architecture is a ton of fun and I'm looking forward to implementing some
+                    emulator features once I can get some of the more complex parts of the NES done.
+                </p>
+            </div>
+            <div class="column second-column">
+                <img src="NES-Emulator.gif" alt="NES Emulator GIF">
+            </div>
+        </div>
+        <div class="spacer" style="height: 20px;"></div>
+
+        <div id="lox-implementation" class="container">
+            <div class="column left-justify small-text">
+                <p style="font-style: italic;font-weight: bold;">
+                    Lox Implementation
+                </p>
+                <p>
+                    Ahhh lox. I remember reading Robert Nystroms "Game Design Patterns" book when I was in college and falling in love 
+                    with his style (don't look at me like that, it's not weird...). When I started reading his "Crafting Interpreters"
+                    bible I couldn't put it down. Something that I never knew I was interested in all of a sudden just clicked and I 
+                    knew I had to try to make this.
+                </p>
+                <p>
+                    Crafting an interpreter that someone else is showing you STEP BY STEP how to create... Is still hard. It took me 
+                    far too long to understand some of the concepts he was talking about. This is also WITH experience doing exactly
+                    what he's trying to teach me. Some CS concepts are just hard to grasp (might also just be me). Regardless with some 
+                    serious work and probably too many hours, I finished my Java implementation and immediately got started on his final 
+                    implementation: C.
+                </p>
+                <p>
+                    I think I had a lot more fun in C than I did with Java, in part to me enjoying the language more. While no one really 
+                    fully understands C it feels more at home to an embedded programmer like myself. Anyways, I could chat about my 
+                    struggles, triumphs, and joys with this book (and I still might one day) but for now I'll just say: "Go read it!"
+                </p>
+            </div>
+            <div class="column second-column">
+                <img src="Crafting-Interpreters.gif" alt="Crafting Interpreters Book GIF">
+            </div>
+        </div>
+        <div class="spacer" style="height: 20px;"></div>
+
+        <p class="copyright">
+            © 2019-2024 Austin L. Howard
+        </p>
+
+        <script>
+            // JavaScript to handle smooth scrolling with offset
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+    
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+    
+                    if (targetElement) {
+                        const offset = document.querySelector('.sticky-header').offsetHeight;
+    
+                        window.scrollTo({
+                            top: targetElement.offsetTop - offset,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        </script>
+    </body>
 </html>
